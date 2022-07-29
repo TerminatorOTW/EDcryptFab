@@ -1,0 +1,72 @@
+
+/* Developed by the "TERMINATOR OTW" */
+
+.main-layout {
+    -fx-font-family: "Comic Sans MS";
+}
+
+.centre-layout {
+    -fx-padding: 15 30 20 30;
+}
+
+.centre-layout .label {
+    -fx-text-fill: rgb(0, 162, 232);
+    -fx-font-size: 13px;
+    -fx-padding: 10 0 2 0;
+}
+
+.centre-layout .or-label {
+    -fx-text-fill: #000;
+    -fx-font-size: 13px;
+}
+
+.centre-layout .text-field {
+    -fx-border-width: 2px;
+    -fx-border-color: #000;
+    -fx-pref-width: 300px;
+    -fx-background-radius: 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-font-size: 13px;
+}
+
+.centre-layout .button {
+    -fx-padding: 0;
+    -fx-border: none;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.bottom-bar .encrypt-btn {
+    -fx-border-color: rgb(0, 162, 232);
+    -fx-border-width: 2px;
+    -fx-background-radius: 0;
+    -fx-background-color: rgb(0, 162, 232);
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-text-fill: #fff;
+    -fx-font-size: 15px;
+}
+
+.bottom-bar .encrypt-btn:hover {
+    -fx-background-color: #414141;
+    -fx-border-color: #414141;
+}
+
+.bottom-bar .decrypt-btn {
+    -fx-border-color: rgb(0, 162, 232);
+    -fx-border-width: 2px;
+    -fx-background-radius: 0;
+    -fx-background-color: rgb(255, 255, 255);
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-font-size: 15px;
+}
+
+.bottom-bar .decrypt-btn:hover {
+    -fx-background-color: #414141;
+    -fx-border-color: #414141;
+    -fx-text-fill: #fff;
+}
