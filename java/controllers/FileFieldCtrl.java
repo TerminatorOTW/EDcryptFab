@@ -12,31 +12,36 @@ import javafx.stage.FileChooser;
 public class FileFieldCtrl {
 
     private final FileChooser fileChooser = new FileChooser();
+    private final TextField filePathField;
     
     public FileFieldCtrl(MainCtrl mainCtrl) {
         
         MainActivity mainActivity = mainCtrl.getModal().getMainActivity();
         
-        final TextField filePathField = mainActivity.fileField;
+        this.filePathField = mainActivity.fileField;
         final Button fileSearchBtn = mainActivity.filePathBtn;
         
         // setAction
-        this.setBtnActivity(fileSearchBtn, filePathField);
+        this.setBtnActivity(fileSearchBtn);
         
         // settings
         fileChooser.setInitialDirectory(new File(System.getProperty("user.home")));
     }
     
-    private void setBtnActivity(Button fileSearchBtn, TextField filePathField) {
+    private void setBtnActivity(Button fileSearchBtn) {
         
         fileSearchBtn.setOnAction(e->{
             File file = fileChooser.showOpenDialog(fileSearchBtn.getScene().getWindow());
-            if (file != null && file.isFile()) {
-                filePathField.setText(file.getPath());
-                fileChooser.setInitialDirectory(file.getParentFile());
-            }
+            this.readFile(file);
         });
         
+    }
+    
+    public void readFile(File file) {
+        if (file != null && file.isFile()) {
+            filePathField.setText(file.getPath());
+            fileChooser.setInitialDirectory(file.getParentFile());
+        }
     }
     
 }
